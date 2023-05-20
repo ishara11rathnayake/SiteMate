@@ -1,3 +1,4 @@
 APIServer/node_modules
 APIServer/nodemon.json
+APIClient/node_modules
 .idea
