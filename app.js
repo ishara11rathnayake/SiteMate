@@ -2,10 +2,8 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-// const mongoose = require("mongoose");
 
 const issuesRoutes = require("./api/v1/routes/issues");
-
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,7 +25,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/issues", issuesRoutes);
+app.use("/api/v1/issues", issuesRoutes);
 
 /**
  * endpoint not found
